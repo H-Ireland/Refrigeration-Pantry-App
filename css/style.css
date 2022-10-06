@@ -1,0 +1,299 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: transparent;
+}
+
+.mySlides {
+    display: none;
+}
+
+#introVid {
+    width: 100%;
+}
+
+#us {
+    padding-top: 3%;
+}
+
+#app {
+    margin-top: 4%
+}
+
+.bold {
+    font-weight:  bold; 
+    font-style: oblique;
+    text-align: center; 
+    font-variant: small-caps; 
+}
+
+#mission {
+    padding-top: 7%;
+    margin-top: -7%;
+}
+
+#mininav {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.make-meal {
+    background: rgb(197, 6, 6);
+    /* border-radius: 45%; */
+    width: 90vw;
+    height: auto;
+    font-size: 48px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    margin-left: 3%;
+
+}
+
+#getRecipeBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    width: 70vh;
+}
+
+#clearBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    width: 70vh;
+}
+
+#gotVeganBtn {
+    color: rgb(21, 58, 21);
+}
+
+#goBackBtn {
+    display: flex;    
+    justify-content: center;
+    margin-top: 2%;    
+    width: 40vh;
+}
+
+/* ABOUT US CARDS */
+#about {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(39, 25, 25, 0.801);
+    transition: 0.3s;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 26px 0 rgba(43, 15, 107, 0.2);  
+}
+  
+.container {
+    padding: 2px 16px;
+}
+
+@media (max-width: 376px) {
+      #about {
+          display: block;
+      }
+      .card {
+          margin-left: 65px;
+      }
+      #mission {
+        width: 100%;
+      }
+}
+
+  /* PRICE CARDS */
+
+#subscribe {
+    margin-top: 0px;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+  }
+  
+  .price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  
+  .price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .price .grey {
+    background-color: #eee;
+    font-size: 20px;
+  }
+  
+  .button {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
+
+#introVid {
+    width: 100%;
+    animation: 10.5s ease 0s 1 normal forwards running fadeOut;
+}
+
+@keyframes fadeOut {
+0% {opacity: 1;}
+94% {opacity: 1;}
+95% {opacity: 0.5;}
+100% {opacity: 0;}
+}
+
+#logo {
+    background-image: url(../images/pexels-daria-obymaha-1684032.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 4%;
+    height: auto;
+    width: 100%;
+    opacity: 0; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: 11s ease 0s 1 normal forwards running fadeIn;
+    padding-bottom: 57%; 
+}
+
+#fml {
+        width:100%;
+        height: auto
+}    
+
+@keyframes fadeIn {   
+94% {opacity: 0;}
+
+95% {opacity: 0.5;}
+
+100% {opacity: 1;}
+}
+
+h1 {
+    position: absolute;
+    padding-top: 12%;
+    font-size: 14vw;
+    left: 15%;
+    font-family: initial;
+    font-style: italic;
+    color: white;
+    text-shadow: black 4px 5px 9px;
+    width: 100%;
+    height: auto;
+}
+
+#go {
+    position: absolute;
+    font-size: 4vw;
+    color: white;
+    left: 29%;
+    opacity: 0;
+    padding: 0% 3%;
+    background: red;
+    background-image: none;
+    animation: 11.5s ease 0s 1 normal forwards running up;
+}
+
+@keyframes up {
+    
+0% {top: 58%;
+    opacity: 0;
+}
+
+90% {top: 58%;
+    opacity: 0;
+}
+
+100% {top: 55%;
+    opacity: 1;
+}
+}
+
+#makeMeal {
+    position: absolute;
+    margin-bottom: -10%;
+    animation: 12s ease 0s 1 normal forwards running up2;
+}
+
+@keyframes up2 {
+    
+0% {bottom: 14%;
+    opacity: 0;
+}
+
+90% {bottom: 14%;
+    opacity: 0;
+}
+
+100% {bottom: 17%;
+    opacity: 1;
+}
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.btn {
+    display: revert !important; 
+}
+
+.social {
+    font-size: 270%
+}
+
+.socialBtns {
+    margin-left: -2%;
+}
+  

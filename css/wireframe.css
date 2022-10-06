@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(83, 83, 77);
+}
+
+#navBar {
+border-style: solid;
+background-color: aliceblue;
+height: 50px;
+}
+.navBtns {
+    background-color: rgb(189, 189, 189);
+    border-style: solid;
+    float: left;
+    margin-left: 20px;
+    margin-top: 9px;
+}
+#introVid {
+    border-style: solid;
+    background-color: aliceblue;
+    height: 300px;
+}
+#introVidDiv {
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    border-style: solid;
+    width: 98%;
+    height: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+
+#ourMission {
+    border-style: solid;
+    background-color: aliceblue;
+    height: 200px;
+}
+#missionDiv {
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    border-style: solid;
+    width: 98%;
+    height: 87%;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+
+#ourApp {
+    text-align: center; 
+    border-style: solid;
+    background-color: aliceblue;
+    height: 500px;
+}
+
+
+#aboutUs {
+    text-align: center;
+    border-style: solid;
+    background-color: aliceblue;
+    height: 300px;
+}
+.aboutBoxes {
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    border-style: solid;
+    width: 200px;
+    height: 190px;
+    float: left;
+    margin-left: 7%;
+
+}
+
+
+#footer {
+    border-style: solid;
+    background-color: aliceblue;
+    height: 50px;
+}
+.smLogos {
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    height: 50%;
+    width: 20%;
+    border-style: solid;
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
+
+}
+

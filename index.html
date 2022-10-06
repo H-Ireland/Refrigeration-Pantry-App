@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- import bootstrap full CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/02_fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+
+    <title>&#127831;Qwik Cooks App&#127837;</title>
+</head>
+
+<body id="body">
+
+<!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-black w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right w3-hover-amber"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="./images/foodImgs/hamburger.png"
+                        alt="icon of hamburger representing navbar" width="40px" height="30px"></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-amber" title="Home Link">HOME</a>
+            <a href="#mission" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-amber" title="Mission Link">OUR
+                MISSION</a>
+            <a href="#app" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-amber" title="App Link">MAKE A MEAL</a>                
+            <a href="#subscribe" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hover-amber" title="Subscribe Link">SUBSCRIBE</a>
+        </div>
+    </div>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#mission" class="w3-bar-item w3-button w3-padding-large w3-hover-amber" onclick="myFunction()"
+            title="Mission Link">Mission</a>
+        <a href="#app" class="w3-bar-item w3-button w3-padding-large w3-hover-amber" onclick="myFunction()" title="App Link">Make a Meal</a>        
+        <a href="#subscribe" class="w3-bar-item w3-button w3-padding-large w3-hover-amber" onclick="myFunction()"
+            title="Subscribe Link">Subscribe</a>
+    </div>
+
+<!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+<!-- Intro Video -->
+
+        <div id="intro" class=".container-fluid">
+            <video src="./images/QwikCooks.mp4" autoplay="" id="introVid"></video>
+
+            <div id="logo">
+                <div id="fml">
+                    <h1>Qwik Cooks</h1>
+                    <h2 id="go">For Those On The Go.</h2>
+                    <a href="#app"> <button id="makeMeal" type="button"
+                            class="btn result-button w-100 btn-success btn-lg" title="Make A Meal button"> <b>MAKE A
+                                MEAL!</b></button></a>
+                </div>
+            </div>
+        </div>
+<!-- Our Mission -->
+        <div class="w3-black" id="mission">
+            <div class="w3-container w3-content w3-padding-64" style="max-width:800px;margin-top: -1%;">
+                <h2 class="w3-wide w3-center">OUR MISSION</h2>
+                <p class="w3-opacity w3-center"><i>QwikCooks is an app for those looking to make quality meals
+                        on a budget. Typically we target folks from lower to middle income homes, and provide "Qwik"
+                        and easy to make recipes.  We understand that life is busy, so we provide recipes that take 30min 
+                        or less to make.   In 2013, Nutrition Journal published a study that reported that in 1965, between 
+                        88 and 95 percent of meals were prepared at home, whereas in 2007 between 65 and 72 percent 
+                        were. That's a 16 to 30 percent drop. While we have steadily climbed back to an estimated 82%, 
+                        that percentage may take a dive with apps like Uber Eats, Postmates and GrubHub making it 
+                        easier to get food delivered.</i></p>
+                <br>
+            </div>
+        </div>
+
+        <div id="app">
+            <div class="make-meal"><p>Let's make a meal!</p>           
+            <p class="w3-opacity w3-center"><i>Choose what's in your fridge or pantry!</i></p>
+            </div>
+            <div id="mininav" style="visibility: hidden">
+                <div class="btn btn-group-lg">
+                    <button id="allMealsBtn" type="button" class="btn btn-primary">All Meals</button>
+                    <button id="apptzBtn" type="button" class="btn btn-success">Appetizers</button>
+                    <button id="entreeBtn" type="button" class="btn btn-danger">Entrees</button>
+                    <button id="dessertBtn" type="button" class="btn btn-warning">Desserts</button>
+                    <br><br>
+                    <button id="gotVeganBtn" type="button" class="btn btn-success">Got Vegetarian?</button>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="w3-row w3-padding-32" id="choices">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="font-weight-bold card border-primary col-md-6 col-xl-3 text-primary">
+                        <h3 class="font-weight-bolder text-center">Fruits:</h3>
+                        <div class="ml-1">
+                            <input type="checkbox" name="ingredients" value="apples"> Apples
+                            <br>
+                            <input type="checkbox" name="ingredients" value="bananas"> Bananas
+                            <br>
+                            <input type="checkbox" name="ingredients" value="grapes"> Grapes
+                            <br>
+                            <input type="checkbox" name="ingredients" value="mango"> Mango
+                            <br>
+                            <input type="checkbox" name="ingredients" value="oranges"> Oranges
+                            <br>
+                            <input type="checkbox" name="ingredients" value="pears"> Pears
+                            <br>
+                            <input type="checkbox" name="ingredients" value="pineapple"> Pineapple
+                            <br>
+                            <input type="checkbox" name="ingredients" value="strawberries"> Strawberries
+                            <br>
+                            <input type="checkbox" name="ingredients" value="watermelon"> Watermelon
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="font-weight-bold card border-success col-md-6 col-xl-3 text-success">
+                        <h3 class="font-weight-bolder text-center">Vegetables:</h3>
+                        <div class="ml-1">
+                            <input type="checkbox" name="ingredients" value="avocados"> Avocados
+                            <br>
+                            <input type="checkbox" name="ingredients" value="bell peppers"> Bell Peppers
+                            <br>
+                            <input type="checkbox" name="ingredients" value="broccoli"> Broccoli
+                            <br>
+                            <input type="checkbox" name="ingredients" value="cabbage"> Cabbage
+                            <br>
+                            <input type="checkbox" name="ingredients" value="carrots"> Carrots
+                            <br>
+                            <input type="checkbox" name="ingredients" value="celery"> Celery
+                            <br>
+                            <input type="checkbox" name="ingredients" value="cucumbers"> Cucumbers
+                            <br>
+                            <input type="checkbox" name="ingredients" value="lettuce"> Lettuce
+                            <br>
+                            <input type="checkbox" name="ingredients" value="onions"> Onions
+                            <br>
+                            <input type="checkbox" name="ingredients" value="spinach"> Spinach
+                            <br>
+                            <input type="checkbox" name="ingredients" value="tomatoes"> Tomatoes
+                            <br><br>
+                        </div>
+                    </div>
+
+                    <div class="font-weight-bold card border-danger col-md-6 col-xl-3 text-danger">
+                        <h3 class="font-weight-bolder text-center">Breads:</h3>
+                        <div class="ml-1">
+                            <input type="checkbox" name="ingredients" value="bagels"> Bagels
+                            <br>
+                            <input type="checkbox" name="ingredients" value="cake mix"> Cake Mix
+                            <br>
+                            <input type="checkbox" name="ingredients" value="graham crackers"> Graham Crackers
+                            <br>
+                            <input type="checkbox" name="ingredients" value="pancake mix"> Pancake Mix
+                            <br>
+                            <input type="checkbox" name="ingredients" value="tortillas"> Tortillas
+                            <br>
+                            <input type="checkbox" name="ingredients" value="wheat bread"> Wheat Bread
+                            <br>
+                            <input type="checkbox" name="ingredients" value="white bread"> White Bread
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="font-weight-bold card border-primary col-md-6 col-xl-3 text-primary">
+                        <div class="ml-1">
+                            <h3 class="font-weight-bolder text-center">Dairy:</h3>
+                            <input type="checkbox" name="ingredients" value="american cheese"> American Cheese
+                            <br>
+                            <input type="checkbox" name="ingredients" value="cream cheese"> Cream Cheese
+                            <br>
+                            <input type="checkbox" name="ingredients" value="eggs"> Eggs
+                            <br>
+                            <input type="checkbox" name="ingredients" value="ice cream"> Ice Cream
+                            <br>
+                            <input type="checkbox" name="ingredients" value="milk"> Milk
+                            <br>
+                            <input type="checkbox" name="ingredients" value="mozzarella"> Mozzarella
+                            <br>
+                            <input type="checkbox" name="ingredients" value="swiss cheese"> Swiss Cheese
+                            <br>
+                            <input type="checkbox" name="ingredients" value="whipped cream"> Whipped Cream
+                            <br>
+                            <input type="checkbox" name="ingredients" value="yogurt"> Yogurt
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="font-weight-bold card border-success col-md-6 col-xl-3 text-success">
+                        <div class="ml-1">
+                            <h3 class="font-weight-bolder text-center">Carbs:</h3>
+                            <input type="checkbox" name="ingredients" value="pasta"> Pasta
+                            <br>
+                            <input type="checkbox" name="ingredients" value="potatoes"> Potatoes
+                            <br>
+                            <input type="checkbox" name="ingredients" value="rice"> Rice
+                        </div>
+                    </div>
+
+                    <div class="font-weight-bold card border-danger col-md-6 col-xl-3 text-danger">
+                        <div class="ml-1">
+                            <h3 class="font-weight-bolder text-center">Meats:</h3>
+                            <input type="checkbox" name="ingredients" value="bacon"> Bacon
+                            <br>
+                            <input type="checkbox" name="ingredients" value="chicken"> Chicken
+                            <br>
+                            <input type="checkbox" name="ingredients" value="ham"> Ham
+                            <br>
+                            <input type="checkbox" name="ingredients" value="pastrami"> Pastrami
+                            <br>
+                            <input type="checkbox" name="ingredients" value="pork chops"> Pork Chops
+                            <br>
+                            <input type="checkbox" name="ingredients" value="roast beef"> Roast Beef
+                            <br>
+                            <input type="checkbox" name="ingredients" value="sausage"> Sausage
+                            <br>
+                            <input type="checkbox" name="ingredients" value="shrimp"> Shrimp
+                            <br>
+                            <input type="checkbox" name="ingredients" value="steak"> Steak
+                            <br>
+                            <input type="checkbox" name="ingredients" value="talapia"> Talapia
+                            <br>
+                            <input type="checkbox" name="ingredients" value="turkey"> Turkey
+                            <br><br>
+                        </div>
+                    </div>
+
+                    <div class="font-weight-bold card border-info col-md-6 col-xl-3 text-info">
+                        <div class="ml-1">
+                            <h3 class="font-weight-bolder text-center">Spices:</h3>
+                            <input type="checkbox" name="ingredients" value="basil"> Basil
+                            <br>
+                            <input type="checkbox" name="ingredients" value="black pepper"> Black Pepper
+                            <br>
+                            <input type="checkbox" name="ingredients" value="chili powder"> Chili Powder
+                            <br>
+                            <input type="checkbox" name="ingredients" value="cinnamon"> Cinnamon
+                            <br>
+                            <input type="checkbox" name="ingredients" value="garlic salt"> Garlic Salt
+                            <br>
+                            <input type="checkbox" name="ingredients" value="onion powder"> Onion Powder
+                            <br>
+                            <input type="checkbox" name="ingredients" value="salt"> Salt
+                            <br>
+                            <input type="checkbox" name="ingredients" value="sugar"> Sugar
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="font-weight-bold card border-success col-md-6 col-xl-3 text-success">
+                        <div  class="ml-1">
+                            <h3  class="font-weight-bolder text-center">Condiments:</h3>
+                            <input type="checkbox" name="ingredients" value="butter"> Butter
+                            <br>
+                            <input type="checkbox" name="ingredients" value="chocolate syrup"> Chocolate Syrup
+                            <br>
+                            <input type="checkbox" name="ingredients" value="hot sauce"> Hot Sauce
+                            <br>
+                            <input type="checkbox" name="ingredients" value="ketchup"> Ketchup
+                            <br>
+                            <input type="checkbox" name="ingredients" value="mayonnaise"> Mayonnaise
+                            <br>
+                            <input type="checkbox" name="ingredients" value="mustard"> Mustard
+                            <br>
+                            <input type="checkbox" name="ingredients" value="nuts"> Nuts
+                            <br>
+                            <input type="checkbox" name="ingredients" value="olive oil"> Olive Oil
+                            <br>
+                            <input type="checkbox" name="ingredients" value="ranch dressing"> Ranch Dressing
+                            <br>
+                            <input type="checkbox" name="ingredients" value="salsa"> Salsa
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn btn-group-lg">
+                <button type="submit" class="btn btn-danger mt-3" id="getRecipeBtn" title="Get Recipe Button">Get
+                    Recipe</button>
+                <br>
+                <button type="submit" class="btn btn-primary mt-3" id="clearBtn" title="Clear All Fields Button">Clear
+                    All</button>
+            </div>
+        </div>
+
+        <div id="display" class="container">
+            <div class="card-deck row" id="deck">
+            </div>
+            <br><br>
+            <div class="btn btn-group-lg">
+                <button id="goBackBtn" class="btn btn-success" style="visibility: hidden" title="Go Back Button">Go
+                    Back</button>
+            </div>
+            </div>         
+        </div>
+
+ <!-- PRICE CARDS -->
+  <div class="w3-container w3-content w3-padding-64" id="subscribe">
+    <h2 style="text-align:center">QwikCooks Subscription</h2>
+    <p style="text-align:center">There's A Choice For Everyone!</p>
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">FREE</li>
+            <li class="grey">$0 / year</li>
+            <li>Access To 25+ Recipes</li>
+            <li>Recipe of the Week</li>
+            <li>-</li>
+            <li>-</li>
+            <li class="grey"><a href="www.signup.com" class="button">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">QwikCooks-</li>
+            <li class="grey">$ 1.99 / year</li>
+            <li>Access To 50+ Recipes</li>
+            <li>Recipe of the Week</li>
+            <li>QwikCooks Forum</li>
+            <li>-</li>
+            <li class="grey"><a href="www.signup.com" class="button">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">QwikCooks+</li>
+            <li class="grey">$ 9.99 / year</li>
+            <li>Access To 100+ Recipes</li>
+            <li>Recipe of the Week</li>
+            <li>QwikCooks Forum</li>
+            <li>QwikCooks Newsletter</li>
+            <li class="grey"><a href="www.signup.com" class="button">Sign Up</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Footer -->
+    <footer class="w3-container w3-padding-24 w3-center w3-opacity w3-light-grey w3-small">
+        <p>©2022 QwikCooks All Rights Reserved</p>
+       <div class="socialBtns">
+        <a href="#"> <i class="fab fa-instagram-square social mx-2"> </a> </i>
+        <a href="#"> <i class="fab fa-twitter-square social mx-2"> </a> </i>
+       <a href="#"> <i class="fab fa-facebook-square social mx-2"> </a> </i>
+    </div>
+    </footer>
+
+    <!-- import jquery -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- import bootstrap scripts -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- import D3.js -->
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
