@@ -11,6 +11,7 @@ function myFunction() {
     }
 }
 //------------------------------------------------------------------------------------------------------------------------------------------------
+// These arrays were only used in development stage of project.  They may be utilized in a future iteration of app.
 
 let fruitArr = ['apples', 'oranges', 'pears', 'bananas', 'strawberries', 'pineapple', 'grapes', 'watermelon', 'mango'];
 let vegArr = ['lettuce', 'carrots', 'cucumbers', 'cabbage', 'bell peppers', 'onions', 'spinach', 'broccoli', 'avocados', 'celery',
