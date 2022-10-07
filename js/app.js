@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------------------------
-//This code is from W3 Schools and is applied to navbar
+// This code is from W3 Schools and is applied to navbar
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
@@ -24,9 +24,10 @@ let spiceArr = ['salt', 'black pepper', 'sugar', 'onion powder', 'garlic salt', 
 let condArr = ['mustard', 'ketchup', 'mayonnaise', 'hot sauce', 'salsa', 'butter', 'olive oil', 'nuts', 'ranch dressing', 'chocolate syrup'];
 
 //-------------------------------------------------------------------------------------------------------------------------------------
+// Initializes the array representing all ingredients chosen/selected by user. 
 let chosenIng = [];
 
-//recipeObj: array of objects storing the name of meal/dish along with ingredients needed for each recipe
+// recipeObj: array of objects storing the name of meal/dish along with ingredients needed for each recipe
 const recipeObj = [
     {
         dish: "Club Sandwich",
